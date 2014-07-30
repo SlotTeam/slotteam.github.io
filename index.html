@@ -1,1 +1,420 @@
-Wellcome to slotteam.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Slot Framework: A cross side web framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="bootstrap/oneTheme/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="./assets/css/bootswatch.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="./bower_components/html5shiv/dist/html5shiv.js"></script>
+    <script src="./bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <script>
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-23019901-1']);
+        _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+<div class="navbar navbar-dark navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="./" class="navbar-brand"><i class="fa fa-shield"></i> Slot Framework</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="./#get-started">Get Started</a>
+                </li>
+                <li>
+                    <a href="docs">Documentation</a>
+                </li>                    <li>
+                <a href="./#demos">Demos</a>
+            </li>
+                <!--<li>
+                    <a href="../help/">Help</a>
+                </li>-->
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><!--<i class="fa fa-bolt">--><!--<i class="fa fa-tint"></i>--><i class="fa fa-bolt"></i> Themes <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="themes">
+                        <!--<li><a href="../default/">Default</a></li>
+                        <li class="divider"></li>-->
+                        <li><a href="bootstrap/oneTheme">OneTheme</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://bootswatch.com/" target="_blank">Bootswatch themes</a></li>
+                        <li class="divider"></li>
+                        <li><a href="bootstrap/default/">Default Bootstrap</a></li>
+                    </ul>
+                </li>
+
+                <!--<li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+                <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>-->
+
+                <li class="active">
+                    <a href="http://blog.SlotFramework.org"><i class="fa fa-rss"></i> Blog</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="splash">
+    <div class="container">
+        <!--<div class="row ">
+            <div class="col-md-4 col-lg-4 center-block">
+                <div class="alert alert-dismissable alert-success">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p>Commnig soon</p>
+                </div>
+            </div>
+        </div>-->
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6 center-block" style="min-height: 12em;">
+                <!--<i class="fa fa-shield pull-left" style="font-size: 8em;"></i>
+                <div>
+                    <h1 class="pull-leftX" style="margin-top: 0;">Slot</h1>
+                    <h2 class="pull-leftX" style="margin-top: 0;">Framework</h2>
+                    <p class="lead">Closing the gap between client and server side.</p>
+                </div>-->
+                <div>
+                    <i class="fa fa-shield pull-left" style="font-size: 7.5em;"></i>
+                    <div>
+                        <h1 class="pull-leftX" style="margin-top: 0; margin-bottom: 0px;">Slot</h1>
+                        <h2 class="pull-leftX" style="margin-top: 0; margin-bottom: 22px;">Framework</h2>
+                    </div>
+                    <p class="lead">Closing the gap between client and server side.</p>
+                </div>
+                <!--</div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6 center-block" style="min-height: 12em;">-->
+                <br/>
+                <div>
+                    <blockquote>
+                        <p>Generate a MVC layer for your project that reuse the same code on client and server side.
+                            <!--, taking your web design as a pattern-->
+                        </p>
+                        <br/>
+                        <small>
+                            That's our goal.
+                        </small>
+                    </blockquote>
+                </div>
+                <br/>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-6" style="font-familyX: 'Courier New'">
+                <div class="alert alert-dismissable alert-primary">
+                    <i class="water right top fa fa-laptop"></i>
+                    <i class="water right fa fa-gears"></i>
+                    <i class="water fa fa-desktop"></i>
+                    <h4>Built in Node.js</h4>
+                    <pre>
+/home
+/home cd slot
+/home/slot ..
+/home/slot node start
+loading...
+..
+Designer loaded..
+Server loaded..
+REST API loaded..
+Cross Side API loaded..
+..
+Start coding now.. :-)
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="section-tout">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <h3><i class="fa fa-github"></i> Open Source</h3>
+                <p>Slot Framework is released under the <a target="_blank" href="./MIT-LICENSE.html">MIT License</a>
+                    and maintained by many collaborators in the community on <a target="_blank" href="https://github.com/SlotTeam/slot-framework">GitHub</a>.
+                </p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <h3><i class="fa fa-coffee"></i> Built in Node.js</h3>
+                <p>Take advantage of the language that really cross the line between platforms and
+                    technologies. The nature of JavaScript has become it a language that is used today in many areas
+                    like databases (<a target="_blank" href="http://mongodb.com">MongoDB</a>), web browsers, and
+                    finally <a target="_blank" href="http://nodejs.org/">Node.js</a>.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <h3><i class="fa fa-css3"></i> Today's technologies</h3>
+                <p>Disruptive client side frameworks are the perfect option to work with Slot, we can accomplish
+                    excellent results and a plethora of screen sizes using; <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>,
+                    <a target="_blank" href="http://foundation.zurb.com/">Zurb Foundation</a>,
+                    <a target="_blank" href="https://yuilibrary.com/">Yahoo UI</a>,
+                    <a target="_blank" href="http://jquery.com/">JQuery</a>,
+                    <a target="_blank" href="http://jqueryui.com/">JQuery UI</a>
+                    and many others.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <h3><i class="fa fa-leaf"></i> Simple and Natural</h3>
+                <p>Built over the premise, that the native environment of a browser is compounded for
+                    HTML+CSS+JavaScript, and today's web designs requires HTML5+CCS3 to ensure
+                    responsive and functionality in a lot of screen sizes.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <h3><i class="fa fa-cube"></i> Design and Prototyping First</h3>
+                <p>Slot puts the focus on reuse every piece of work you have done on design/prototyping, that is why
+                    Slot provides a methodology to organize the page in fragments, and define data-models that
+                    fragments will be using.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <h3><i class="fa fa-cubes"></i> Modular Template Engine</h3>
+                <p>A web page contains many spaces to insert data portions.
+                    This spaces are called <i class="text-success">Slots</i>, and the portions are called <i class="text-success">Fragments</i>, finally,
+                    a fragment is binded to a <i class="text-success">HTML template</i>. This way keep your development
+                    using pure and powerful HTML.
+                </p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <h3><i class="fa fa-code"></i> RESTful Api</h3>
+                <p>Develop your REST Services faster, use the API to easy implement your web services.
+                    The responses can be done as a <i class="text-success">Single Objects</i> or <i class="text-success">Array Objects</i>,
+                    and built-in <i class="text-success">Native Server Side Pagination</i> with scrolling methods (current, first, next, last).
+                </p>
+            </div>
+            <!--<div class="col-lg-4 col-sm-6">
+                <h3><i class="fa fa-cloud"></i> Get Plugged In</h3>
+                <p>An <a href="./help/#api" onclick="pageTracker._link(this.href); return false;">API</a>
+                   is available for integrating with your platform. In use by <a href="http://320press.com/wpbs/"
+                                                                               target="_blank">WPBS</a>, <a
+                            href="http://www.fusionleaf.com/" target="_blank">FusionLeaf</a>, <a
+                            href="http://yabdab.com/stacks/snaps/bootsnap/" target="_blank">BootSnap</a>, and
+                    others.</p>
+            </div>-->
+            <div class="col-lg-4 col-sm-6">
+                <h3><i class="fa fa-bullhorn"></i> Stay Tuned</h3>
+
+                <p>Be up today about updates by following us via
+                    <a href="http://blog.SlotFramework.org" onclick="pageTracker._link(this.href); return false;">Blog</a>,
+                    <a href="http://blog.slotframework.org/feeds/posts/default?alt=rss">RSS</a>,
+                    <a href="https://twitter.com/slotframework">Twitter</a> or
+                    <a href="https://github.com/SlotTeam/slot-framework">GitHub</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center center-blockX">
+            <div class="col-lg-8 col-sm-6X center-block" style="float: none;">
+                <h3><i class="fa fa-cloud"></i> Support Us</h3>
+                <p>We work whit passion, love and fully compromised in deliver our best effort in this project.
+                    We really appreciate any community support, contributors can work with us as an Open Source project on <a href="https://github.com/SlotTeam/slot-framework">GitHub</a>.
+                    <br/>
+                    Also, donations are welcome too via
+                    <!--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=332432423F22J3E24324M3Q37324324328JC223434">Paypal Donate</a>-->
+                    <a href="https://www.paypal.com/">Paypal Donate</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="get-started" class="section-preview">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1>Get Started</h1>
+                <p class="lead">This are the core topics you need to know to maximise your experince with Slot Framework.</p>
+            </div>
+
+            <div class="col-xs-6x col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="./docs/#introducing-slot">
+                        <div class="header">
+                            <i class="fa fa-shield"></i>
+                        </div>
+                    </a>
+                    <div class="caption">
+                        <h3>Introducing Slot</h3>
+                        <p>After months of hard work we are here, and happy to announce the beta release of an idea that  has become a reality.
+                            A Cross Side Web Framework that helps us reuse objects on Server Side and Client Side...<p>
+                        <a href="./docs/#introducing-slot" class="btn btn-default" role="button">Learn more</a> <!--<a href="#" class="btn btn-default" role="button">Button</a>--></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6x col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="./docs/#design-prototype">
+                        <div class="header">
+                            <i class="fa fa-cube"></i>
+                        </div>
+                    </a>
+                    <div class="caption">
+                        <h3>Designing / Prototyping</h3>
+                        <p>Learn the most important principle in Slot, how to orchestrate your page in fragments, and how to reuse them on many pages.
+                            Also you can use dynamic data to populate your page without necessity of database connections...</p>
+                        <p><a href="./docs/#design-prototype" class="btn btn-default" role="button">Learn more</a> <!--<a href="#" class="btn btn-default" role="button">Button</a>--></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6x col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="./docs/#mvc-layer">
+                        <div class="header primary">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                    </a>
+                    <div class="caption">
+                        <h3>2Generating MVC Layer</h3>
+                        <p>Once your design is ready, Slot takes all definitions you have done and automatically generates a MVC for your project.
+                            The main feature in the MVC, is that it can be used to render fragments on client and server side...</p>
+                        <p><a href="./docs/#mvc-layer" class="btn btn-primary" role="button">Learn more</a> <!--<a href="#" class="btn btn-default" role="button">Button</a>--></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6x col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="./docs/#binding-databases">
+                        <div class="header success">
+                            <i class="fa fa-database"></i>
+                        </div>
+                    </a>
+                    <div class="caption">
+                        <h3>Binding Databases</h3>
+                        <p>Include Node.js Drivers in your project to connect with
+                            <a target="_blank" href="http://sequelizejs.com/articles/getting-started#connecting">MySQL</a>,
+                            <a target="_blank" href="http://sequelizejs.com">MariaDB</a>,
+                            <a target="_blank" href="http://sequelizejs.com">SQLite</a>,
+                            <a target="_blank" href="http://sequelizejs.com">PostgreSQL</a>,
+                            <a target="_blank" href="https://github.com/Azure/node-sqlserver">MS SqlServer</a>,
+                            <a target="_blank" href="http://mongodb.github.io/node-mongodb-native/">MongoDB</a>
+                            and many others.
+                            Get knowledge of tips and tricks to lean and faster binding with the MVC Layer...</p>
+                        <p><a href="./docs/#binding-databases" class="btn btn-success" role="button">Learn more</a> <!--<a href="#" class="btn btn-default" role="button">Button</a>--></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6x col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="./docs/#rest-api">
+                        <div class="header danger">
+                            <i class="fa fa-code"></i>
+                        </div>
+                    </a>
+                    <div class="caption">
+                        <h3>REST Api in action</h3>
+                        <p>A faster way to develop web services,
+                            learn how to relay on the Api Default Convention,
+                            return Single/Array Objects,
+                            lean implementation of Native Server Side Pagination,
+                            and how to scroll lot of data using Api Methods...
+                        </p>
+                        <p><a href="./docs/#rest-api" class="btn btn-danger" role="button">Learn more</a> <!--<a href="#" class="btn btn-default" role="button">Button</a>--></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="demos" class="section-preview">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Looking for demos?</h1>
+                <p class="lead">Stay tuned with us, we are working hard.</p>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="thumbnail">
+                    <div class="header">
+                        <i class="fa fa-bullhorn"></i>
+                        <!--<p><small style="font-size: 0.8em">Coming Soon</small></p>-->
+                        <!--<h1>Coming Soon</h1>-->
+                        <h1 style="opacity: 0.7;">Coming Soon</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!--<footer>
+      <div class="row">
+        <div class="col-lg-12">
+
+          <ul class="list-unstyled">
+            <li class="pull-right"><a href="#top">Back to top</a></li>
+            <li><a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
+            <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a></li>
+            <li><a href="https://twitter.com/thomashpark">Twitter</a></li>
+            <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a></li>
+            <li><a href="./help/#api">API</a></li>
+            <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2">Donate</a></li>
+          </ul>
+          <p>Made by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
+          <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+          <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+        </div>
+      </div>
+    </footer>-->
+
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+
+                <ul class="list-unstyled">
+                    <li class="pull-right"><a href="#top">Back to top</a></li>
+                    <li><a href="http://blog.SlotFramework.org" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
+                    <li><a href="http://blog.slotframework.org/feeds/posts/default?alt=rss">RSS</a></li>
+                    <li><a href="https://twitter.com/slotframework">Twitter</a></li>
+                    <li><a href="https://github.com/SlotTeam/slot-framework">GitHub</a></li>
+                    <!--<li><a href="../help/#api">API</a></li>-->
+                    <li>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=332432F22J324324324EM3Q5467468456J546C4562">Donate</a>
+                    </li>
+                </ul>
+                <p>Made by <a href="https://github.com/cecheverria" rel="nofollow">Carlos Echeverría</a>. Contact him at <a href="mailto:slotframework@gmail.com">slotframework@gmail.com</a>.</p>
+                <p>Code released under the <a href="https://github.com/SlotTeam/slotteam.github.io/blob/master/LICENSE">MIT License</a>.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./assets/js/bootswatch.js"></script>
+<script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+/*@brand-primary-o:         #008cba;xx
+@brand-success-o:         #43ac6a;
+@brand-info-o:            #5bc0de;
+@brand-warning-o:         #E99002;
+@brand-danger-o:          #F04124;*/
+/*@brand-primary:         #1f78d8;
+@brand-success:         #159776;
+@brand-info:            #5bc0de;
+@brand-warning:         #fddc43;
+@brand-danger:          #d70a16;*/
+/*@border-radius-base:        0;
+@border-radius-large:       0;
+@border-radius-small:       0;*/
+/*@border-radius-base:        1px;
+@border-radius-large:       2px;
+@border-radius-small:       1px;*/
+/*@border-radius-base:        2px;
+@border-radius-large:       3px;
+@border-radius-small:       2px;*/
+/**
+ * TODO:
+ *  Compile this .less file using the command line:
+ *  lessc assets/less/bootswatch.less assets/css/bootswatch.css;
+ *  lessc -x assets/less/bootswatch.less assets/css/bootswatch.min.css
+ */
+body {
+  padding-top: /*50px*/ 45px;
+}
+#banner {
+  border-bottom: none;
+}
+.page-header h1 {
+  font-size: 4em;
+}
+.bs-docs-section {
+  margin-top: 8em;
+}
+#doc-style-api h1,
+.doc-style-api h1,
+#doc-style-api h2,
+.doc-style-api h2,
+#doc-style-api h3,
+.doc-style-api h3,
+#doc-style-api h4,
+.doc-style-api h4,
+#doc-style-api h5,
+.doc-style-api h5,
+#doc-style-api h6,
+.doc-style-api h6 {
+  font-weight: 400;
+}
+#doc-style-api #doc-content .bs-docs-section,
+.doc-style-api #doc-content .bs-docs-section,
+#doc-style-api .doc-content .bs-docs-section,
+.doc-style-api .doc-content .bs-docs-section {
+  margin-top: 0em;
+}
+#doc-style-api #doc-content h2,
+.doc-style-api #doc-content h2,
+#doc-style-api .doc-content h2,
+.doc-style-api .doc-content h2 {
+  /*margin-top: 50px;
+      padding-top: 0px;*/
+  /*padding-top: 80px;
+      margin-top: -30px;*/
+  padding-top: 10px;
+  margin-top: 40px;
+  margin-bottom: 11px;
+}
+#doc-style-api #doc-content .page-header,
+.doc-style-api #doc-content .page-header,
+#doc-style-api .doc-content .page-header,
+.doc-style-api .doc-content .page-header {
+  /*background-color: lighten(@btn-default-bg, 5%);*/
+}
+#doc-style-api #doc-content .container-fluid,
+.doc-style-api #doc-content .container-fluid,
+#doc-style-api .doc-content .container-fluid,
+.doc-style-api .doc-content .container-fluid {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+@media (max-width: 768px) {
+  #doc-style-api #doc-content .container-fluid .row .table.no-sides > thead > tr > th,
+  .doc-style-api #doc-content .container-fluid .row .table.no-sides > thead > tr > th,
+  #doc-style-api .doc-content .container-fluid .row .table.no-sides > thead > tr > th,
+  .doc-style-api .doc-content .container-fluid .row .table.no-sides > thead > tr > th,
+  #doc-style-api #doc-content .container-fluid .row .table.no-sides > tbody > tr > th,
+  .doc-style-api #doc-content .container-fluid .row .table.no-sides > tbody > tr > th,
+  #doc-style-api .doc-content .container-fluid .row .table.no-sides > tbody > tr > th,
+  .doc-style-api .doc-content .container-fluid .row .table.no-sides > tbody > tr > th,
+  #doc-style-api #doc-content .container-fluid .row .table.no-sides > tfoot > tr > th,
+  .doc-style-api #doc-content .container-fluid .row .table.no-sides > tfoot > tr > th,
+  #doc-style-api .doc-content .container-fluid .row .table.no-sides > tfoot > tr > th,
+  .doc-style-api .doc-content .container-fluid .row .table.no-sides > tfoot > tr > th,
+  #doc-style-api #doc-content .container-fluid .row .table.no-sides > thead > tr > td,
+  .doc-style-api #doc-content .container-fluid .row .table.no-sides > thead > tr > td,
+  #doc-style-api .doc-content .container-fluid .row .table.no-sides > thead > tr > td,
+  .doc-style-api .doc-content .container-fluid .row .table.no-sides > thead > tr > td,
+  #doc-style-api #doc-content .container-fluid .row .table.no-sides > tbody > tr > td,
+  .doc-style-api #doc-content .container-fluid .row .table.no-sides > tbody > tr > td,
+  #doc-style-api .doc-content .container-fluid .row .table.no-sides > tbody > tr > td,
+  .doc-style-api .doc-content .container-fluid .row .table.no-sides > tbody > tr > td,
+  #doc-style-api #doc-content .container-fluid .row .table.no-sides > tfoot > tr > td,
+  .doc-style-api #doc-content .container-fluid .row .table.no-sides > tfoot > tr > td,
+  #doc-style-api .doc-content .container-fluid .row .table.no-sides > tfoot > tr > td,
+  .doc-style-api .doc-content .container-fluid .row .table.no-sides > tfoot > tr > td {
+    padding: 8px 0px;
+  }
+}
+#doc-style-api .bs-docs-section,
+.doc-style-api .bs-docs-section {
+  margin-top: 1em;
+}
+#doc-style-api .bs-docs-section h3,
+.doc-style-api .bs-docs-section h3,
+#doc-style-api .bs-docs-section h4,
+.doc-style-api .bs-docs-section h4 {
+  /*padding-top: 46px;
+      margin-top: 0px;*/
+  /*padding-top: 50px;
+      margin-top: 0;*/
+  /*padding-top: 80px;
+      margin-top: -60px;*/
+  padding-top: 75px;
+  margin-top: -55px;
+}
+#doc-style-api .bs-docs-section .section-content,
+.doc-style-api .bs-docs-section .section-content {
+  margin-left: 10px;
+}
+@media (max-width: 767px) {
+  #doc-style-api .bs-docs-section .section-content,
+  .doc-style-api .bs-docs-section .section-content {
+    margin-left: 5px;
+  }
+}
+#doc-style-api pre,
+.doc-style-api pre {
+  /**
+     * Emulatin GitHub CSS with HighlightJS
+     */
+  padding: 0.5em;
+  background: #f8f8f8;
+  border: 1px solid #eee;
+  border-radius: 0;
+  -webkit-box-shadow: -5px 0 0 #e2e2e2;
+  box-shadow: -5px 0 0 #e2e2e2;
+  margin-left: 5px;
+}
+#doc-style-api .ident10,
+.doc-style-api .ident10 {
+  margin-left: 10px;
+}
+#doc-style-api .ident15,
+.doc-style-api .ident15 {
+  margin-left: 15px;
+}
+#doc-style-api .ident20,
+.doc-style-api .ident20 {
+  margin-left: 20px;
+}
+.height-100 {
+  height: 100px;
+}
+.height-140 {
+  height: 140px;
+}
+.height-150 {
+  height: 150px;
+}
+.height-200 {
+  height: 200px;
+}
+.height-250 {
+  height: 250px;
+}
+.bs-docs-sidenav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.bs-docs-sidebar.affix {
+  position: static;
+}
+@media (min-width: 992px) {
+  .bs-docs-sidebar.affix {
+    position: fixed;
+  }
+  .bs-docs-sidebar.affix,
+  .bs-docs-sidebar.affix-bottom {
+    width: 213px;
+  }
+  .bs-docs-sidebar.affix-bottom .bs-docs-sidenav,
+  .bs-docs-sidebar.affix .bs-docs-sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .bs-docs-sidebar .nav > .active > ul {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .bs-docs-sidebar.affix-bottom,
+  .bs-docs-sidebar.affix {
+    width: 263px;
+  }
+}
+.bs-docs-sidebar .nav > li > a {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #999;
+  padding: 4px 20px;
+}
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+  font-weight: 700;
+  color: #563d7c;
+  background-color: transparent;
+  border-left: 2px solid #563d7c;
+}
+.bs-docs-sidebar .nav .nav {
+  display: none;
+  padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.bs-docs-sidebar .nav .nav > li.active > a,
+.bs-docs-sidebar .nav .nav > li.active:hover > a,
+.bs-docs-sidebar .nav .nav > li.active:focus > a {
+  padding-left: 29px;
+  font-weight: 700;
+}
+.bs-component {
+  position: relative;
+}
+.bs-component .modal {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  z-index: 1;
+  display: block;
+}
+.bs-component .modal-dialog {
+  width: 90%;
+}
+.bs-component .popover {
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  margin: 20px;
+}
+#source-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  font-weight: bold;
+}
+.progress {
+  margin-bottom: 10px;
+}
+footer {
+  margin: 5em 0;
+}
+footer li {
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+footer p {
+  clear: left;
+  margin-bottom: 0;
+}
+.splash {
+  padding: 4em 0 2em;
+  /*background: @brand-success; //#141d27;
+    background:  -moz-linear-gradient(70deg,  #141d27 0%, #233344 72%, #2c4055 89%, #39526e 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#141d27), color-stop(72%,#233344), color-stop(89%,#2c4055), color-stop(100%,#39526e));
+    background: -webkit-linear-gradient(70deg,  #141d27 0%,#233344 72%,#2c4055 89%,#39526e 100%);
+    background: -o-linear-gradient(70deg,  #141d27 0%,#233344 72%,#2c4055 89%,#39526e 100%);
+    background: -ms-linear-gradient(70deg,  #141d27 0%,#233344 72%,#2c4055 89%,#39526e 100%);
+    background: linear-gradient(70deg,  #141d27 0%,#233344 72%,#2c4055 89%,#39526e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#141d27', endColorstr='#39526e',GradientType=1 );*/
+  /*color: #fff;
+    text-align: center;*/
+  /*.horizontal-three-colors(@start-color: #00b3ee; @mid-color: #7a43b6; @color-stop: 50%; @end-color: #c3325f) {
+      background-image: -webkit-linear-gradient(left, @start-color, @mid-color @color-stop, @end-color);
+      background-image: linear-gradient(to right, @start-color, @mid-color @color-stop, @end-color);
+      background-repeat: no-repeat;
+      filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down, gets no color-stop at all for proper fallback
+    }*/
+  overflow: hidden;
+}
+.splash pre {
+  /*background-color: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(0, 0, 0, 0.1);*/
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: white;
+  /*text-align: left;*/
+}
+.splash h1 {
+  font-size: 4em;
+}
+.splash #social {
+  margin: 2em 0;
+}
+.splash .alert {
+  margin: 0 /*2em 0*/;
+}
+.splash .bsa {
+  max-width: 350px;
+  margin: 0 auto;
+  background: none;
+}
+.splash .bsa .one .bsa_it_ad {
+  border: 1px solid #3E4653 !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.splash .bsa a {
+  color: #fff;
+}
+.section-tout {
+  padding: 4em 0 3em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #f4f4f4;
+}
+.section-tout .fa {
+  margin-right: 0.5em;
+}
+.section-tout p {
+  margin-bottom: 3em;
+  color: #6f6f6f;
+}
+.section-preview {
+  padding: 4em 0 4em;
+}
+.section-preview .preview {
+  margin-bottom: 4em;
+  background-color: #eaf1f1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.section-preview .preview .image {
+  padding: 5px;
+}
+.section-preview .preview .image img {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.section-preview .preview .options {
+  text-align: center;
+  padding: 0 2em 2em;
+}
+.section-preview .preview .options p {
+  margin-bottom: 2em;
+}
+.section-preview .dropdown-menu {
+  text-align: left;
+}
+.section-preview .lead {
+  margin-bottom: 2em;
+}
+@media (max-width: 767px) {
+  .section-preview .image img {
+    width: 100%;
+  }
+}
+.sponsor img {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.sponsor a:hover {
+  text-decoration: none;
+}
+.bsa {
+  padding: 0;
+}
+.bsa .one .bsa_it_ad {
+  border: none !important;
+  background-color: transparent !important;
+}
+.bsa .one .bsa_it_ad .bsa_it_t,
+.bsa .one .bsa_it_ad .bsa_it_d {
+  color: inherit !important;
+}
+.bsa .one .bsa_it_ad .bsa_it_i {
+  margin-bottom: 0 !important;
+}
+.bsa .one .bsa_it_p {
+  display: none;
+}
