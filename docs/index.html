@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Slot Framework: Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../bootstrap/oneTheme/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/github.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <script>
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-23019901-1']);
+        _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body data-spyXX="scroll" data-targetXX=".bs-docs-sidenav">
+
+    <div class="navbar navbar-dark navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="../" class="navbar-brand"><i class="fa fa-shield"></i> Slot Framework</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <!--<li class="active">
+                        <a href="./#get-started">Documentation</a>
+                    </li>-->
+                    <li>
+                        <a href="./#demos">Demos</a>
+                    </li>
+                    <!--<li>
+                        <a href="../help/">Help</a>
+                    </li>-->
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><!--<i class="fa fa-bolt">--><!--<i class="fa fa-tint"></i>--><i class="fa fa-bolt"></i> Themes <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="themes">
+                            <!--<li><a href="../default/">Default</a></li>
+                            <li class="divider"></li>-->
+                            <li><a href="../bootstrap/oneTheme">OneTheme</a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://bootswatch.com/" target="_blank">Bootswatch themes</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../bootstrap/default/">Default Bootstrap</a></li>
+                        </ul>
+                    </li>
+
+                    <!--<li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+                    <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>-->
+
+                    <li class="active">
+                        <a href="http://blog.SlotFramework.org"><i class="fa fa-rss"></i> Blog</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container doc-style-api">
+        <div class="row">
+            <div id="doc-content" class="col-md-9" role="main">
+                <!-- Overview
+                ================================================== -->
+                <div id="introducing-slot" class="bs-docs-section clearfix">
+                    <h2 class="page-header">Introducing Slot</h2>
+                    <p>After months of hard work we are here, and happy to announce the beta release of an idea that  has become a reality. A Cross Side Web Framework that helps us reuse objects on Server Side and Client Side, and minimize the code you need to do.
+                    </p>
+                    <p>Built on <a href="http://nodejs.org/">Node.js</a>, we take advantage of the language that is really crossing the line between platforms and technologies. The nature of JavaScript has become it a language that is used today in many areas like databases (<a href="http://www.mongodb.com/">MongoDB</a> for example), web browsers, and finally Node.js that is exploding the use of JavaScript from command line to -web servers, ftp servers and socket servers-.
+                    </p>
+
+                    <div class="section-content">
+                        <h3 id="introducing-slot-the-problem">The problem</h3>
+                        <p>As a web developers and Rich Internet Applications lovers, every time we want to build a -dynamic, fancy and responsive client side- we encounter a lot of obstacles that makes things hard and a little confused, for example we can found situations like the next ones:</p>
+                        <blockquote>The MVC Model is ready for consume on server side, but we need to replicate it to JavaScript if we are going to use it on AJAX.</blockquote>
+                        <blockquote>ResultSets are fully usables on server side, but we can't scroll or manage it on client side.</blockquote>
+                        <blockquote>If we want to re-render parts of the web page, we need to invoke server side to re-build a then render again on client. And so many  things that we need defeat to accomplish our goals.</blockquote>
+                        <p>The main concern is that practically we need to take a lot of our server side stuff, then port and replicate it to JavaScript on the client side. That’s a very huge way and a waste of time and resources that can be used to improve other aspects of a web project.</p>
+
+
+                        <h3 id="introducing-slot-the-idea">What Slot does?</h3>
+                        <p>Seamless the main goal in Slot is:</p>
+                        <blockquote>Generate a MVC layer for your project that reuse the same code on client and server side, taking your web design as a pattern.</blockquote>
+                        <p>But to make it happens, it's absolutely necessary stay clear with the basic concepts to use Slot Framework.</p>
+                    </div>
+
+                </div>
+
+                <!-- Overview
+                ================================================== -->
+                <div id="design-prototype" class="bs-docs-section clearfix">
+                    <h2 class="page-header">Designing / Prototyping</h2>
+                    <p>TODO: Change this introductory paragraph
+                        <br/>
+                        Learn the most important principle in Slot, how to orchestrate your page in fragments, and how to reuse them on many pages.
+                        Also you can use dynamic data to populate your page without necessity of database connections...</p>
+
+                    <div class="section-content">
+                        <h3 id="designing-simple-and-natural">Simple and Natural Web Oriented</h3>
+                        <p>Taking the premise that the native environment of a browser is compounded for HTML+CSS+JavaScript, and today's trending in web designs requires HTML5+CCS3 to guarantee responsive and functionality in a wide range of screen sizes.</p>
+                        <p>We have built Slot Framework keeping this premises on mind, and we offers a way to use this technologies without necessity of server side controls. And maintaining the clean and pure use of HTML, saving the extra layers that server side controls wraps over native HTML+CSS.</p>
+                        <p>That's why today's disruptive client side frameworks are the perfect option to work with Slot, we can accomplish excellent results and a plethora of screen sizes using;
+                            <a href="http://getbootstrap.com/">Bootstrap</a>,
+                            <a href="http://foundation.zurb.com/">Zurb Foundation</a>,
+                            <a href="http://yuilibrary.com/">Yahoo UI</a>,
+                            <a href="http://jquery.com/">JQuery</a>,
+                            <a href="http://jqueryui.com/">JQuery UI</a>
+                            and many others powerful JavaScript frameworks.</p>
+                        <p>In conclusion, Slot is not a server side controls oriented framework, instead is intended to use HTML5 tools.</p>
+
+                        <h3 id="designing-first-oriented">Design and Prototyping First Oriented</h3>
+                        <p>One of the most emphasis point we have done, is going to the rescue for the good practices and better methodologies, and that’s the case of Design Stage.</p>
+                        <p>Many times building web sites, we have encountered situations in which the rush force us to dedicate a minimum time for the design stage, that is a very bad decision, and will impact the quality of final product. Furthermore, in many  cases when we need to create a very functional prototype, we start creating a lite web page with a few data, and probably we need to do some server side code to accomplish the prototype.</p>
+                        <p>Design stage is a precious time to detect and define the data-models we are going to use in the development stage, but really we don’t take advantage of this opportunity. It’s a perfect moment that can be used to link our data-models with the database structures. No matter what the situation we affront on design stage or prototyping, in the majority of cases we lost the time invested on, because we don’t get focused on reuse 100% of the output from this stage.</p>
+                        <p>Slot put the focus on reuse every piece of work you have done on design/prototyping, that is why Slot provide a methodology to organize the page in fragments, and to define the data-models that fragments will be using. Finally based on those definitions, Slot generates a MVC layer ready to use on development stage, this layer can be used in server and client side too.</p>
+
+                        <!--<h3 id="designing-slot-page-components">Slot Page Components</h3>
+                        <p>A web page contains many spaces where portions of page can be inserted.</p>
+                        <p>This spaces are called Slots, and the portions are called Fragments.</p>
+                        <p>A Fragment is plugged in a Slot.</p>
+                        <p>A Fragment is central unit of design.</p>
+                        <p>A Fragment contains Attributes.</p>
+                        <p>An attribute can be defined as a Slot, furthermore, a fragment can contain many slots.</p>
+                        <p>A Fragment is binded to an HTML template</p>-->
+                    </div>
+                </div>
+
+                <!-- Slot Project Architecture
+                ================================================== -->
+                <div id="project-architecture" class="bs-docs-section clearfix">
+                    <h2 class="page-header">Inside a Slot Project</h2>
+                    <p>Learn the ways to create a project, and take a full view of the internal structure.</p>
+
+                    <div class="section-content">
+                        <h3 id="project-architecture-creating-project-slot-command">Creating a project (slot command line)</h3>
+                        <p>This feature will be ready when <a>Slot Command Line</a> has been released.
+                            Meanwhile, those prompt lovers can easily build a slot project following the next <a href="#project-architecture-creating-project-manually">manual step by step</a>.
+                        </p>
+
+                        <h3 id="project-architecture-creating-project-manually">Creating a project (manually)</h3>
+                        <p>TODO: pending to complete</p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Steps to create a project</span>
+                                    <table class="table table-hover no-sides">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 35px;"></th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><span class="label label-info">1</span></td>
+                                            <td>
+                                                Execute the command line:
+                                                <pre class="pre-scrollable"><code class="hljs bash">$ mkdir /your-project-path/mySlotProject
+$ cd /your-project-path/mySlotProject
+
+<b>$ npm init</b>
+
+It only covers the most common items, and tries to guess sane defaults.
+...
+...
+Press ^C at any time to quit.</code></pre>
+                                                Complete basic configurations, the command will be asking to you for many values, use "mySlotProject" as a name for demo purposes:
+                                                <pre class="pre-scrollable"><code class="hljs bash">name: (nodeModule) mySlotProject
+version: (<span class="hljs-number">0.0</span><span class="hljs-number">.0</span>)
+description: Description <span class="hljs-keyword">for</span> your project
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author: Carlos Echeverria
+license: (ISC) MIT</code></pre>
+                                                As a result the command will create a <code>packaje.json</code> file:
+                                                <pre class="pre-scrollable"><code class="hljs bash">About to write to /your-project-path/mySlotProject/package.json:
+
+{
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"mySlotProject"</span>,
+    <span class="hljs-string">"version"</span>: <span class="hljs-string">"0.0.0"</span>,
+    <span class="hljs-string">"description"</span>: <span class="hljs-string">"Description for your project"</span>,
+    <span class="hljs-string">"main"</span>: <span class="hljs-string">"index.js"</span>,
+    <span class="hljs-string">"scripts"</span>: {
+        <span class="hljs-string">"test"</span>: <span class="hljs-string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+    },
+    <span class="hljs-string">"author"</span>: <span class="hljs-string">"Carlos Echeverria"</span>,
+    <span class="hljs-string">"license"</span>: <span class="hljs-string">"MIT"</span>
+}
+</code></pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="label label-info">2</span></td>
+                                            <td>Up to this point the project has been created, but you need to
+                                                add "SlotFramework" as a dependency in the project.
+                                                To do that you need to add the next node in the <code>package.json</code> file:
+                                                <pre class="pre-scrollable"><code class="hljs bash">{
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"myFirstModule"</span>,
+    <span class="hljs-string">"version"</span>: <span class="hljs-string">"0.0.0"</span>,
+    <span class="hljs-string">"description"</span>: <span class="hljs-string">"Description for your project"</span>,
+    <span class="hljs-string">"main"</span>: <span class="hljs-string">"index.js"</span>,
+    <span class="hljs-string">"scripts"</span>: {
+    <span class="hljs-string">"test"</span>: <span class="hljs-string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+    },
+    <span class="hljs-string">"author"</span>: <span class="hljs-string">"Carlos Echeverria"</span>,
+    <span class="hljs-string">"license"</span>: <span class="hljs-string">"MIT"</span><b style="font-size: 15px;">,
+    <span class="hljs-string">"dependencies"</span>:{
+        <span class="hljs-string">"slot-framework"</span>: <span class="hljs-string">"1.0.0"</span>
+    }</b>
+}</code></pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="label label-info">3</span></td>
+                                            <td>To complete the setup, is necessary download and install all dependencies in the proyect.
+                                                To do that you need to execute the next command line:
+                                                <pre class="pre-scrollable"><code class="hljs bash">$ cd /your-project-path/mySlotProject
+<b>$ npm install</b>
+
+npm WARN package.json myFirstModule@<span class="hljs-number">0.0</span><span class="hljs-number">.0</span> No repository field.
+npm WARN package.json myFirstModule@<span class="hljs-number">0.0</span><span class="hljs-number">.0</span> No README data
+npm http GET https:<span class="hljs-comment">//registry.npmjs.org/mime/1.2.11</span>
+npm http <span class="hljs-number">304</span> https:<span class="hljs-comment">//registry.npmjs.org/mime/1.2.11</span>
+mime@<span class="hljs-number">1.2</span><span class="hljs-number">.11</span> node_modules\mime</code></pre>
+
+                                                Finally the command has installed all the necessaries packages and modules into the project,
+                                                all of them were created on folder <code>/your-project-path/mySlotProject/node_modules</code>:
+                                                <pre class="pre-scrollable"><code class="hljs bash"><b>$ ls -ltr node_modules/</b>
+total 24
+drwxr-xr-x+ 1 cecheveria     None 0 Jun  5 18:12 bower
+drwxr-xr-x+ 1 cecheveria     None 0 Jun  5 18:12 grunt
+drwxr-xr-x+ 1 cecheveria     None 0 Jun  5 18:12 grunt-contrib-clean
+drwxr-xr-x+ 1 cecheveria     None 0 Jun  5 18:12 grunt-contrib-concat
+drwxr-xr-x+ 1 cecheveria     None 0 Jun  5 18:12 grunt-contrib-less
+drwxr-xr-x+ 1 cecheveria     None 0 Jun  5 18:12 grunt-contrib-watch</code></pre>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="project-architecture-project-structure">Project Structure</h3>
+                        <p>Once the project has been created, it will containt a lot folders and the project configuration set in the <code>slot.json</code> file.
+                            It declares paths to folders and key attributes to use in the project.</p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Slot.json file</span>
+<pre class="pre-scrollable"><code class="hljs bash">{
+    metaData:     <span class="hljs-string">"/bind"</span>,
+    webRootDir:   <span class="hljs-string">"/www"</span>,
+    mvcRootDir:   <span class="hljs-string">"/app/mvc"</span>,
+    restRootDir:  <span class="hljs-string">"/app/rest"</span>,
+    dbRootDir:    <span class="hljs-string">"/app/db"</span>,
+    restFilter:   <span class="hljs-string">"/rest"</span>,
+    mvcFilter:    <span class="hljs-string">"/mvc"</span>
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="project-architecture-project-structure-description" class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Slot.json attributes</span>
+                                    <table class="table table-striped table-hover ">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 100px;">Name</th>
+                                                <th>description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>metaData</td>
+                                                <td>By default is set to <code>/bind</code>, this attribute points to the folder that holds
+                                                    the <code>fragments definitions</code> used on design time.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>webRootDir</td>
+                                                <td>By default is set to <code>/www</code>, this attribute points to the folder that holds
+                                                    the resources used in the project; html files, css files, images, javascript files,
+                                                    and any other content needed to build the project.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>mvcRootDir</td>
+                                                <td>By default is set to <code>/app/mvc</code>, remember that Slot is a built in MCV framework, and to maintain separated layers,
+                                                    the <code>mvcRootDir</code> attribute was created to point to the folder that holds
+                                                    the auto generated <code>MVC resources</code>.
+                                                    <br/>
+                                                    <a href="#mvc-layer">See Generating MVC Layer</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>restRootDir</td>
+                                                <td>By default is set to <code>/app/rest</code>,
+                                                    this attribute points to the folder that holds
+                                                    the <code>REST Api Methods</code> created in the project.
+                                                    <br/>
+                                                    <a href="#rest-api">See Rest Api in action</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>dbRootDir</td>
+                                                <td>By default is set to <code>/app/db</code>,
+                                                    this attribute points to the folder that holds
+                                                    the <code>Data Access Objects</code> used to interact with databases, data storages and many other data sources.
+                                                    <br/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>restFilter</td>
+                                                <td>By default is set to <code>/rest</code>, this attribute holds the <code>URL path</code>
+                                                    used to filter all <code>REST Service</code> calls.
+                                                    <br>
+                                                    <span class="text-muted">Example:</span>
+                                                    <br>
+                                                    If the <code>restFilter</code> attribute points to <code>/rest</code>
+                                                    and the <code>REST Service</code> to be consumed is <code>/examples/contacts</code>,
+                                                    then, the end point url to consume this service will be <code>/rest/examples/contacts</code>.
+                                                    Any other url will be unresolved.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>mvcFilter</td>
+                                                <td>By default is set to <code>/mvc</code>, this attribute holds the <code>URL path</code>
+                                                    used to filter all <code>MVC Object</code> requests.
+                                                    <br>
+                                                    <span class="text-muted">Example:</span>
+                                                    <br>
+                                                    If the <code>mvcFilter</code> attribute points to <code>/mvc</code>
+                                                    and the <code>MVC Object</code> to be downloaded is the <code>/examples/mContact.js</code> model,
+                                                    then, the end point url to consume this object will be <code>/mvc/examples/mContact.js</code>.
+                                                    Any other url will be unresolved.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="project-architecture-page-components">Page Components</h3>
+                        <p>An easy way to understand the internal page structure,
+                            is taking in mind that a web page contains spaces where page portions can be inserted.
+                            Learn how to orchestrate this portions, and how to reuse them on many pages.</p>
+                        <div class="container-fluid">
+                            <div id="project-architecture-page-components-description" class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Components TODO: complete explanation</span>
+                                    <table class="table table-striped table-hover ">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 100px;">Name</th>
+                                                <th>description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Slots</td>
+                                                <td>The <code>Slot</code> is the page space where a portion of data will be inserted.
+                                                    To declare a Slot you must use the next syntax in the html template: <code>{@slotName@}</code>.
+                                                    <br>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fragments</td>
+                                                <td>The <code>Fragment</code> is the page portion that will be inserted in a <code>Slot</code>.
+                                                    <p>A Fragment is central unit of design.</p>
+                                                    <p>A Fragment is binded to a HTML template</p>
+                                                    <p>A Fragment contains <code>Attributes</code>.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Attributes</td>
+                                                <td><p>An <code>Attribute</code> is a minimal unit of design,
+                                                        it contains a simple values like names, numbers, simple texts, etc.
+                                                        Also, an attr can contain any <code>complex data</code> you want to display in the page.</p>
+                                                    <p>An attribute can be defined as a <code>Slot</code>, furthermore, a fragment can contain many slots.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p id="project-architecture-page-components-samples">The next is an example of a how to declare simple <code>Slots</code> on <b>Design Time</b>,
+                           we have taken the <a>Contact example</a> page from our tutorials.
+                           In this case just two simple attributes were defined in the page, <code>userName</code> and <code>userNumber</code>:
+                        </p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Simple Slots in /www/examples/contacts.html (on webRootDir folder)</span>
+<pre class="pre-scrollable"><code class="hljs html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">head</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Hi {@useName@}, this is a demo of declaring slots<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>You are the user number: {@userNumber@}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span></code></pre>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!--<span></span>
+                                    <br>-->
+                                    <span class="text-muted">Fragment definition in /bind/examples/contacts.json (on metaData folder)</span>
+<pre class="pre-scrollable"><code class="hljs html"><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">binds</span>:<span class="hljs-value"> {
+        userName:<span class="hljs-string">"Jhon Doe"</span>,
+        userNumber:<span class="hljs-string">"#00001"</span>
+    </span></span></span>}
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generating MVC Layer
+                ================================================== -->
+                <div id="mvc-layer" class="bs-docs-section clearfix">
+                    <h2 class="page-header">MVC Layer</h2>
+                    <p>Parting from a well done <i>Design Stage</i> with a depurated UI, and a clean metadata Model, is time to pass to your <i>Development Stage</i>.
+                    One of the main advantages of Slot's MVC, is that model objects can be used on client and server side, and controller object can be used to render fragments on both sides too.</p>
+
+                    <div class="section-content">
+                        <h3 id="mvc-layer-generating-layer-refresh">Generating layer (refreshing page)</h3>
+                        <p>Base on the previous Slots and Fragments used on <i>Design Time</i> (<a href="#project-architecture-page-components-samples">see page components section</a> ), the framework will <b>Auto generate MVC Objects</b> to be used on <b>Development Time</b>,
+                            a complete MVC Layer will be created on <code>mvcRootDir</code> folder.
+                            This generation will happen each time you refresh a page directly from your browser, you can see next the details of each object that will be generated.
+                        </p>
+                        <div class="container-fluid">
+
+                            <div id="mvc-layer-generating-layer-mvc-description" class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Generated MVC Objects</span>
+                                    <table class="table table-striped table-hover ">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 100px;">Name</th>
+                                            <th>description</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Server Side View</td>
+                                            <td>vContacts.js
+                                                <p>An <code>Attribute</code> is a minimal unit of design,
+                                                <p>An attribute can be defined as a <code>Slot</code>, furthermore, a fragment can contain many slots.</p>
+                                                TODO: explain syntax
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Server Side Model</td>
+                                            <td>mContactsSrv.js
+                                                <p>An <code>Attribute</code> is a minimal unit of design,
+                                                <p>An attribute can be defined as a <code>Slot</code>, furthermore, a fragment can contain many slots.</p>
+                                                TODO: explain syntax
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Client Side Model</td>
+                                            <td>mContacts.js
+                                                <p>An <code>Attribute</code> is a minimal unit of design,
+                                                <p>An attribute can be defined as a <code>Slot</code>, furthermore, a fragment can contain many slots.</p>
+                                                TODO: explain syntax
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!--<span></span>
+                                    <br>-->
+                                    <span class="text-muted">Sample of Client Side Model /app/mvc/examples/mContacts.js</span>
+<pre class="pre-scrollable"><code class="hljs html"><span class="hljs-javadoc">/**
+ * Created using Slot Framework
+ * Object model that represents the main Slot
+ */</span>
+function main() {
+    <span class="hljs-keyword">this</span>.userName = <span class="hljs-string">""</span>;
+    <span class="hljs-keyword">this</span>.userNumber = <span class="hljs-string">""</span>;
+}
+main.create = function() { <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> main(); }
+main.prototype.layout = function() { <span class="hljs-keyword">return</span> page.layouts[<span class="hljs-string">"main"</span>]; }
+main.prototype.bind = function(json) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+}
+main.prototype.onPreRender = function() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="mvc-layer-generating-layer-slot-command">Generating layer (slot command line)</h3>
+                        <p>This feature will be ready when <a>Slot Command Line</a> has been released.
+                            Meanwhile, those prompt lovers can easily generate the MVC Layer using the <a href="#mvc-layer-generating-layer-refresh">refreshing page</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Binding Databases
+                ================================================== -->
+                <div id="binding-databases" class="bs-docs-section clearfix">
+                    <h2 class="page-header">Binding Databases</h2>
+                    <p>Include Node.js Drivers in your project to connect with
+                        <a target="_blank" href="http://sequelizejs.com/articles/getting-started#connecting">MySQL</a>,
+                        <a target="_blank" href="http://sequelizejs.com/articles/getting-started#setup">MariaDB</a>,
+                        <a target="_blank" href="http://sequelizejs.com/articles/getting-started#setup">SQLite</a>,
+                        <a target="_blank" href="http://sequelizejs.com/articles/getting-started#setup">PostgreSQL</a>,
+                        <a target="_blank" href="https://github.com/Azure/node-sqlserver">MS SqlServer</a>,
+                        <a target="_blank" href="http://mongodb.github.io/node-mongodb-native/">MongoDB</a>
+                        and many others.
+                        Get knowledge of tips and tricks to lean and faster binding with the MVC Layer...</p>
+
+                    <div class="section-content">
+                        <h3 id="binding-databases-1">Equals Slot.attributes and Database.field-names</h3>
+                        TODO: Complete this section
+                        <br/>
+                        <p>The API implements a stadarized output response</p>
+
+                    </div>
+                </div>
+
+                <!-- REST Api in action
+                ================================================== -->
+                <div id="rest-api" class="bs-docs-section clearfix">
+                    <h2 class="page-header">REST Api in action</h2>
+                    <p>This api offers the opportunity to do lean web services implementations,
+                        now developers can enjoy a faster way to create RESTful services backed on modules,
+                        and relay on <a href="#rest-api-default-convention">Default Convention</a> to ease your work.
+                        Learn how to return <a href="#rest-api-returning-single-object">Single Objects</a> and <a href="#rest-api-returning-array-object">Array Objects</a>,
+                        what you need to scroll lot of data using <a href="#rest-api-native-server-side-scrolling">Native Server Side Pagination</a>,
+                        and how to <a href="#rest-api-consume-services">consume services</a>.
+                    </p>
+                    <div class="section-content">
+                        <h3 id="rest-api-implement-rest-module">How to implement REST Modules?</h3>
+                        <p>REST Modules are the core in the Api and the most easy to implement feature,
+                            every time you want to serve a web service method you must implement a REST Module.
+                            Also, there are a few steps you need to follow to create an effective module.
+                        </p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <!--<div class="col-md-12 hidden">
+                                    <ul>
+                                        <span class="label label-default">1</span> REST Modules are the core in the Api and the most easy to implement feature,
+                                        every time you want to serve a web service method you must implement a REST Module.
+                                        Also, there are a few steps you need to follow to create an effective module.
+                                    </ul>
+                                    <ul>
+                                        <span class="label label-default">2</span> REST Modules are the core in the Api and the most easy to implement feature,
+                                        every time you want to serve a web service method you must implement a REST Module.
+                                        Also, there are a few steps you need to follow to create an effective module.
+                                    </ul>
+                                </div>-->
+
+                                <div class="col-md-12">
+                                    <span class="text-muted">Steps to implement a REST Module</span>
+                                    <table class="table table-stripedX table-hover ">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 35px;"></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="label label-info">1</span></td>
+                                                <td>Identify your <code>REST folder</code>, the default path for this folder is <code>/app/rest</code>
+                                                    but you can change it at your desire in the <code>slot.json</code> config file.
+                                                    This folder must contain all the REST Module you want to serve
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="label label-info">2</span></td>
+                                                <td>Define a <code>name space</code> for your module, this name space will be the URL path used to invoke your service, by example you can define <code>/examples/contacts</code> as your name space</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="label label-info">3</span></td>
+                                                <td>Define a <code>module name</code>, supposing you are going to name it as <code>search</code>,
+                                                    then you need to create the <code>search.js</code> javascript file in the <code>REST folder</code>.
+                                                    Note that module name and javascript file are syntactically equals.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="label label-info">4</span></td>
+                                                <td>Base on the <code>name space</code> and <code>module name</code> , the URL for consume the service will be <code>/examples/contacts/search</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="label label-info">5</span></td>
+                                                <td>Finally, you need to ensure that the <code>REST module</code> complies with the default convention and implements the <a href="#rest-api-default-convention-rest-module-functions-parameters">Module functions and parameters</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>The next is an example of a plain REST Module, and the detailed table of functions and parameters to complie:
+                        </p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">REST Module</span>
+<pre class="pre-scrollable"><code class="hljs bash"><span class="hljs-keyword">var</span> Slot = <span class="hljs-built_in">require</span>(<span class="hljs-string">'slotFramework'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span><span class="hljs-params">(request,
+             callback)</span> {</span>
+
+    <span class="hljs-keyword">var</span> data = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+    <span class="hljs-comment">/*"set attributes to object data"*/</span>
+
+    callback(data <span class="hljs-comment">/*&lt;&lt;== "data to be saved on session"*/</span>);
+}
+
+module.exports.run = run;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="rest-api-default-convention-rest-module-functions-parameters" class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Module functions and parameters</span>
+                                    <table class="table table-striped table-hover ">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 100px;">Name</th>
+                                                <th>description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>run</td>
+                                                <td>The <code>run function</code> is required, it is executed for the main controller when the REST service is consumed.
+                                                    If this function is not declared, an error will be throwed.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>data</td>
+                                                <td>Is a <code>local variable</code> declared in the module, and it represents the response that your REST service will return</td>
+                                            </tr>
+                                            <tr>
+                                                <td>request</td>
+                                                <td>Is a parameter that main controller passes to <code>run function</code>.
+                                                    It encapsulates a HTTP style request, containing the request line, headers and content body</td>
+                                            </tr>
+                                            <tr>
+                                                <td>callback</td>
+                                                <td>The <code>callback function</code> is a parameter that main controller passes to <code>run function</code>,
+                                                    you must invoke the callback at the end of your module execution, and must pass the <code>data variable</code> as a callback parameter
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>exports.run</td>
+                                                <td>In order to complie with a Node.js module definition, you must set the <code>run function</code> to exported objects in the module.
+                                                    If this function is not exported, the main controller can not execute it, and an error will be throwed
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="rest-api-default-convention">Default convention</h3>
+                        <p>In order to standardize the output response, all REST services will return the same response body.
+                            Taking the previous <a href="#rest-api-implement-rest-module">REST Module</a> example, the corresponding output will be the next:
+                        </p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Response body</span>
+<pre class="pre-scrollable height-140"><code class="hljs javascript">{
+    error: <span class="hljs-number">0</span>,
+    msg: <span class="hljs-string">""</span>,
+    data: {}
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Response attributes</span>
+                                    <table class="table table-striped table-hover ">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 100px;">Name</th>
+                                                <th>description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>error</td>
+                                                <td>By default it returns a cero <code>int value</code>.
+                                                    <br/><span class="text-muted">Reserved values:</span>
+                                                    <br/><span class="ident10"><code>0</code> = execution was successful</span>
+                                                    <br/><span class="ident10"><code>1</code> = execution has fail and there are errors</span>
+                                                    <br/>
+                                                    <br/><span>Also you can return any <code>int value</code> to handle you error situations.</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>msg</td>
+                                                <td>Response message by default is an <code>empty String</code>, but you can return any statement to handle your alerts.
+                                                    <br/><span class="text-muted">Example:</span>
+                                                    <br/><span class="ident10">"Your transaction was successfully executed"</span>
+                                                    <br/><span class="ident10">"Problems executing your transaction"</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>data</td>
+                                                <td>Structured data contains a single <code>JSON object</code> with many attributes inside,
+                                                    also it can contain a <code>paginated array</code> when the REST service handle a <code>JSON array</code> on server side
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="rest-api-returning-single-object">Returning single objects</h3>
+                        <p>Implements a this kind of service when you want return a single <code>JSON object</code>, a contact information, a car detail or a just single pack on information.
+                            If you want to return a list of objects, absolutely this is not the kind of service tou need to implement, to handle lists better refer to <a href="#rest-api-returning-array-object">Returning array objects</a>.
+                        </p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Server side JavaScript</span>
+<pre class="pre-scrollable"><code class="hljs bash"><span class="hljs-keyword">var</span> Slot = <span class="hljs-built_in">require</span>(<span class="hljs-string">'slotFramework'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span><span class="hljs-params">(request,
+             callback)</span> {</span>
+
+    <span class="hljs-keyword">var</span> data = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+    data.name = <span class="hljs-string">"Jhon"</span>;
+    data.lastName = <span class="hljs-string">"Doe"</span>;
+    data.birhtD = (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()).getTime();
+
+    callback(data <span class="hljs-comment">/*&lt;&lt;== "data to be saved on session"*/</span>);
+}
+
+module.exports.run = run;</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Response body</span>
+<pre class="pre-scrollable"><code class="hljs bash">{
+    error: <span class="hljs-number">0</span>,
+    msg: <span class="hljs-string">""</span>,
+    data: {
+        name: <span class="hljs-string">"Jhon"</span>,
+        lastName: <span class="hljs-string">"Doe"</span>,
+        birhtD: <span class="hljs-number">1402546374639</span>
+    }
+}
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="rest-api-returning-array-object">Returning array objects</h3>
+                        <p>Implement this kind of service when you want return a <code>JSON array</code>, a contact list, a car list or a list of items from a search.
+                            By convention <code>JSON arrays</code> are automatically paginated by the framework and must be consumed using the
+                            <a href="#rest-api-native-server-side-scrolling">Native Server Side Scrolling</a>.
+                        </p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Server side JavaScript</span>
+<pre class="pre-scrollable"><code class="hljs javascript"><span class="hljs-keyword">var</span> Slot = <span class="hljs-built_in">require</span>(<span class="hljs-string">'slotFramework'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span><span class="hljs-params">(request,
+             callback)</span> {</span>
+
+    <span class="hljs-keyword">var</span> data = [];
+    <span class="hljs-keyword">for</span>(x=<span class="hljs-number">0</span>; x&lt;<span class="hljs-number">10</span>; x++){
+        <span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+        obj.name = <span class="hljs-string">"Jhon "</span> + x;
+        obj.lastName = <span class="hljs-string">"Doe"</span>;
+        obj.birhtD = (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()).getTime();
+
+        data[x] = obj;
+    }
+
+    callback(data <span class="hljs-comment">/*&lt;&lt;== "data to be saved on session"*/</span>);
+}
+
+module.exports.run = run;
+</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Response body</span>
+<pre class="pre-scrollable"><code class="hljs bash">{
+    error: <span class="hljs-number">0</span>,
+    msg: <span class="hljs-string">""</span>,
+    data: {
+        page: [
+            { <span class="hljs-comment">/* record One */</span> },
+            { <span class="hljs-comment">/* record Two */</span> },
+            { <span class="hljs-comment">/* record Three */</span> },
+            { <span class="hljs-comment">/* record Four */</span> }
+        ],
+        totalRows: <span class="hljs-number">10</span>,
+        totalPages: <span class="hljs-number">3</span>,
+        pageNumber: <span class="hljs-number">1</span>,
+        pageSize: <span class="hljs-number">4</span>
+    }
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Data attributes</span>
+                                    <table class="table table-striped table-hover ">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 100px;">Name</th>
+                                                <th>description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>page</td>
+                                                <td>A chunk from a <code>paginated array</code>, it holds a number of records
+                                                    specified by the <code>pageSize</code> attribute
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>totalRows</td>
+                                                <td>Number of rows on server side buffer</td>
+                                            </tr>
+                                            <tr>
+                                                <td>totalPages</td>
+                                                <td>Number o pages to scroll</td>
+                                            </tr>
+                                            <tr>
+                                                <td>pageNumber</td>
+                                                <td>Current page number</td>
+                                            </tr>
+                                            <tr>
+                                                <td>pageSize</td>
+                                                <td>Number of records per page</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h3 id="rest-api-consume-services">How to consume services?</h3>
+                        <p>The API implements a stadarized output response</p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Invoke a REST service</span>
+<pre class="pre-scrollable"><code class="hljs bash"># Hit a service and set a callback wraper
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search?callback=fnc</span>
+
+# Hit a service and set the page size, the number of records
+# to be returned on each page
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search?pageSize=4</span>
+</span></code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="rest-api-native-server-side-scrolling">Native Server Side Scrolling</h3>
+                        <p>The API implements a stadarized output response</p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span class="text-muted">Scrolling data back and forward</span>
+<pre class="pre-scrollable"><code class="hljs bash"># Set cursor on first record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/first</span>
+
+# Set cursor on next record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/next</span>
+
+# Step back cursor to previous record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/back</span>
+
+# Set cursor on last record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/last</span>
+
+# Get current record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/current</span></code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overview
+                ================================================== -->
+                <div id="manage-themes" class="bs-docs-section clearfix">
+                    <h2 class="page-header">Managing Themes</h2>
+
+                    <div class="section-content">
+                        <h3 id="manage-themes-explore">Explore themes</h3>
+                        <h3 id="manage-themes-install">Install themes</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-3 bs-docs-section">
+                <div class="bs-docs-sidebar hidden-print affix" role="complementary">
+                    <ul class="nav bs-docs-sidenav" data-spyXX="scroll" data-targetXX="#doc-content">
+                        <li class="activeX">
+                            <a href="#introducing-slot">Introducing Slot</a>
+                            <ul class="nav">
+                                <li><a href="#introducing-slot-the-problem">The problem</a></li>
+                                <li><a href="#introducing-slot-the-idea">What Slot does?</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#design-prototype">Designing / Prototyping</a>
+                            <ul class="nav">
+                                <li><a href="#designing-simple-and-natural">Simple and Natural Web Oriented</a></li>
+                                <li><a href="#designing-first-oriented">Design and Prototyping First Oriented</a></li>
+                                <!--<li><a href="#designing-slot-page-components">Slot Page Components</a></li>-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#project-architecture">Inside a Slot Project</a>
+                            <ul class="nav">
+                                <li><a href="#project-architecture-creating-project-slot-command">Creating a project (slot command line)</a></li>
+                                <li><a href="#project-architecture-creating-project-manually">Creating a project (manually)</a></li>
+                                <li><a href="#project-architecture-project-structure">Project Structure</a></li>
+                                <li><a href="#project-architecture-page-components">Page Components</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#mvc-layer">MVC Layer</a>
+                            <ul class="nav">
+                                <li><a href="#mvc-layer-generating-layer-refresh">Generating layer (refreshing page)</a></li>
+                                <li><a href="#mvc-layer-generating-layer-slot-command">Generating layer (slot command line)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#binding-databases">Binding Databases</a>
+                            <ul class="nav">
+                                <li><a href="#binding-databases-1">Simple and Natural Web Oriented</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#rest-api">REST Api in action</a>
+                            <ul class="nav">
+                                <li><a href="#rest-api-implement-rest-module">How to implement REST Modules?</a></li>
+                                <li><a href="#rest-api-default-convention">Default convention</a></li>
+                                <li><a href="#rest-api-returning-single-object">Returning single objects</a></li>
+                                <li><a href="#rest-api-returning-array-object">Returning array objects</a></li>
+                                <li><a href="#rest-api-consume-services">How to consume services?</a></li>
+                                <li><a href="#rest-api-native-server-side-scrolling">Native Server Side Scrolling</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#manage-themes">Managing Themes</a>
+                            <ul class="nav">
+                                <li><a href="#manage-themes-explore">Explore themes</a></li>
+                                <li><a href="#manage-themes-install">Install themes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="page-header hidden" id="banner">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>OneTheme</h1>
+                    <p class="lead">Simplistic and live colors</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <br/>
+                    <blockquote class="pull-rightX">
+                        <p>This is the official theme used on <a href="http://www.SlotFramework.org">Slot Framework</a>,
+                            a cross side oriented web framework.
+                            OneTheme is open sourced, based on <a href="http://www.getbootstrap.org">Bootstrap 3.1.1</a>,
+                            and you can download and use it on any other project.
+                            Also you can fork it on <a href="https://github.com/cecheverria/">Github</a>.
+                        </p>
+                        <br/>
+                        <small>Thanks so much to <a href="https://github.com/ThomasPark/">Thomas Park</a> and <a href="http://www.Bootswatch.com/yeti">Bootswatch/yeti</a> theme, an initial inspiration for OneTheme..</small>
+                    </blockquote>
+                </div>
+
+                <div class="col-lg-6" style="padding: 15px 15px 0 15px; display: none;">
+                    <div class="well sponsor">
+                        <a href="http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI627UCWALYK7UCKBILKJMCT7I5" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'treehouse']);" rel="nofollow" target="_blank">
+                        <span style="float: left; margin-right: 15px;">
+                          <img src="http://srv.buysellads.com/direct/image/track/yes/x/G6NDC27ICWAI627UCWALYK7UCKBILKJMCT7I5" onload="_gaq.push(['_trackEvent', 'banner', 'impression', 'treehouse']);" width="175" height="135">
+                        </span>
+                        </a>
+                        <a href="http://srv.buysellads.com/direct/click/track/yes/x/G6NDC27ICWAI627UCWALYK7UCKBILKJMCT7I5" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'treehouse']);" rel="nofollow" target="_blank">
+                            <h4 style="margin-bottom: 0.4em;">Treehouse</h4>
+                            <div class="clearfix">
+                                <p>Learn Web Design, Coding, Mobile App Development &amp; More.</p>
+                                <p>Start Learning for Free!</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="downloads" class="row" style="height: 25px;">
+            </div>
+            <div id="downloadsX" class="row" style="margin-topX: 50px;">
+                <br/>
+                <div class="col-lg-12">
+                    <div class="page-headerX">
+                        <!--<h5 id="">Download this theme</h5>-->
+                        <p class="lead">Download this theme</p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <a href="./bootstrap.min.css">
+                        <div class="alert alert-primary">
+                            <i class="water-sm right fa fa-cloud-download"></i>
+                            <h4x>bootstrap.min.css</h4x>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <a href="./bootstrap.css">
+                        <div class="alert alert-primary">
+                            <i class="water-sm right fa fa-cloud-download"></i>
+                            <h4x>bootstrap.css</h4x>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <a href="./variables.less">
+                        <div class="alert alert-primary">
+                            <i class="water-sm right fa fa-cloud-download"></i>
+                            <h4x>variables.less</h4x>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <a href="./bootswatch.less">
+                        <div class="alert alert-primary">
+                            <i class="water-sm right fa fa-cloud-download"></i>
+                            <h4x>bootswatch.less</h4x>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
+                    <a class="pull-right" href="#install" >Install instructions</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navbar
+        ================================================== -->
+        <div class="bs-docs-section clearfix hidden">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1 id="navbar">Navbars</h1>
+                    </div>
+
+                    <div class="bs-component">
+                        <div class="navbar navbar-success">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-success-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">Brand</a>
+                            </div>
+                        </div>
+                    </div><!-- /example -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnails
+        ================================================== -->
+        <div class="bs-docs-section hidden">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1 id="thumbnails">Thumbnails</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Watermarked thumbnails</h2>
+                </div>
+
+                <div class="col-xs-6x col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <div class="header success">
+                            <i class="fa fa-check-circle-o"></i>
+                        </div>
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>Put you text in this paragraph and see how pretty looks. Add more lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p><a href="#" class="btn btn-success" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="source-modal" class="modal fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Source Code</h4>
+                    </div>
+                    <div class="modal-body">
+                        <pre></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <ul class="list-unstyled">
+                        <li class="pull-right"><a href="#top">Back to top</a></li>
+                        <!--<li class="pull-right"><a href="./#downloads">Download this theme</a></li>-->
+                        <li><a href="http://blog.SlotFramework.org" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
+                        <li><a href="http://blog.slotframework.org/feeds/posts/default?alt=rss">RSS</a></li>
+                        <li><a href="https://twitter.com/slotframework">Twitter</a></li>
+                        <li><a href="https://github.com/cecheverria/">GitHub</a></li>
+                        <li><a href="../help/#api">API</a></li>
+                        <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2">Donate</a></li>
+                    </ul>
+                    <p>Made by <a href="http://thomaspark.me" rel="nofollow">Carlos Echeverría</a>. Contact him at <a href="mailto:slotframework@gmail.com">slotframework@gmail.com</a>.</p>
+                    <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+                    <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a> and <a href="http://Bootswatch.com" rel="nofollow">Bootswatch</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../assets/js/bootswatch.js"></script>
+<script>
+    /*!
+     * Adapted from Bootstrap docs JavaScript
+     */
+    var $window = $(window)
+    var $body   = $(document.body)
+
+    //var navHeight = $('.navbar').outerHeight(true) + 10
+
+    $body.scrollspy({
+        target: '.bs-docs-sidebar' //'.sidebar'
+        //offset: navHeight
+    });
+
+    $window.on('load', function () {
+        $body.scrollspy('refresh')
+    });
+
+    $('.bs-docs-container [href=#]').click(function (e) {
+        e.preventDefault()
+    })
+</script>
+</body>
+</html>

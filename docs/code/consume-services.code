@@ -1,0 +1,6 @@
+# Hit a service and set a callback wraper
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search?callback=fnc</span>
+
+# Hit a service and set the page size, the number of records
+# to be returned on each page
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search?pageSize=4</span>

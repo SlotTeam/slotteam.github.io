@@ -1,0 +1,32 @@
+{
+    error: <span class="hljs-number">0</span>,                   <span class="hljs-comment">/*Error code*/</span>
+    msg: <span class="hljs-string">""</span>,                    <span class="hljs-comment">/*Execution message*/</span>
+    data: {                     <span class="hljs-comment">/*Structured data, in this case is a paginated array*/</span>
+        page: [
+            {
+                name: <span class="hljs-string">"Jhon 0"</span>,
+                lastName: <span class="hljs-string">"Doe"</span>,
+                birhtD: <span class="hljs-number">1402547127434</span>
+            },
+            {
+                name: <span class="hljs-string">"Jhon 1"</span>,
+                lastName: <span class="hljs-string">"Doe"</span>,
+                birhtD: <span class="hljs-number">1402547127434</span>
+            },
+            {
+                name: <span class="hljs-string">"Jhon 2"</span>,
+                lastName: <span class="hljs-string">"Doe"</span>,
+                birhtD: <span class="hljs-number">1402547127434</span>
+            },
+            {
+                name: <span class="hljs-string">"Jhon 3"</span>,
+                lastName: <span class="hljs-string">"Doe"</span>,
+                birhtD: <span class="hljs-number">1402547127434</span>
+            }
+        ],
+        totalRows: <span class="hljs-number">10</span>,
+        totalPages: <span class="hljs-number">3</span>,
+        pageNumber: <span class="hljs-number">1</span>,
+        pageSize: <span class="hljs-number">4</span>
+    }
+}

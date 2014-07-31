@@ -1,0 +1,9 @@
+{
+    metaData:     <span class="hljs-string">"/bind"</span>,
+    webRootDir:   <span class="hljs-string">"/www"</span>,
+    mvcRootDir:   <span class="hljs-string">"/app/mvc"</span>,
+    restRootDir:  <span class="hljs-string">"/app/rest"</span>,
+    dbRootDir:    <span class="hljs-string">"/app/db"</span>,
+    restFilter:   <span class="hljs-string">"/rest"</span>,
+    mvcFilter:    <span class="hljs-string">"/mvc"</span>
+}

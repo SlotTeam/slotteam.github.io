@@ -1,0 +1,19 @@
+<span class="hljs-javadoc">/**
+ * Created using Slot Framework
+ */</span>
+
+<span class="hljs-javadoc">/**
+ * Object model that represents the main Slot
+ */</span>
+function main() {
+    <span class="hljs-keyword">this</span>.userName = <span class="hljs-string">""</span>;
+    <span class="hljs-keyword">this</span>.userNumber = <span class="hljs-string">""</span>;
+}
+main.create = function() { <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> main(); }
+main.prototype.layout = function() { <span class="hljs-keyword">return</span> page.layouts[<span class="hljs-string">"main"</span>]; }
+main.prototype.bind = function(json) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+}
+main.prototype.onPreRender = function() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+}

@@ -1,0 +1,14 @@
+# Set cursor on first record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/first</span>
+
+# Set cursor on next record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/next</span>
+
+# Step back cursor to previous record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/back</span>
+
+# Set cursor on last record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/last</span>
+
+# Get current record
+http:<span class="hljs-comment">//127.0.0.1:81/rest/examples/contacts/search/current</span>

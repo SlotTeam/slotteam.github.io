@@ -1,0 +1,54 @@
+$ mkdir /your-project-path/mySlotProject
+$ cd /your-project-path/mySlotProject
+
+$ npm init
+
+It only covers the most common items, and tries to guess sane defaults.
+
+See `npm help json` <span class="hljs-keyword">for</span> definitive documentation on these fields
+and exactly what they <span class="hljs-keyword">do</span>.
+
+Use `npm install &lt;pkg&gt; --save` afterwards to install a package and
+save it as a dependency <span class="hljs-keyword">in</span> the package.json file.
+
+Press ^C at any time to quit.
+name: (nodeModule) mySlotProject
+version: (<span class="hljs-number">0.0</span><span class="hljs-number">.0</span>)
+description: Description <span class="hljs-keyword">for</span> your project
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author: Carlos Echeverria
+license: (ISC) MIT
+About to write to /your-project-path/mySlotProject/nodeModule/package.json:
+
+{
+  <span class="hljs-string">"name"</span>: <span class="hljs-string">"mySlotProject"</span>,
+  <span class="hljs-string">"version"</span>: <span class="hljs-string">"0.0.0"</span>,
+  <span class="hljs-string">"description"</span>: <span class="hljs-string">"Description for your project"</span>,
+  <span class="hljs-string">"main"</span>: <span class="hljs-string">"index.js"</span>,
+  <span class="hljs-string">"scripts"</span>: {
+    <span class="hljs-string">"test"</span>: <span class="hljs-string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+  },
+  <span class="hljs-string">"author"</span>: <span class="hljs-string">"Carlos Echeverria"</span>,
+  <span class="hljs-string">"license"</span>: <span class="hljs-string">"MIT"</span>
+}
+
+Is <span class="hljs-keyword">this</span> ok? (yes)
+
+
+{
+  <span class="hljs-string">"name"</span>: <span class="hljs-string">"myFirstModule"</span>,
+  <span class="hljs-string">"version"</span>: <span class="hljs-string">"0.0.0"</span>,
+  <span class="hljs-string">"description"</span>: <span class="hljs-string">"Description for your project"</span>,
+  <span class="hljs-string">"main"</span>: <span class="hljs-string">"index.js"</span>,
+  <span class="hljs-string">"scripts"</span>: {
+    <span class="hljs-string">"test"</span>: <span class="hljs-string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+  },
+  <span class="hljs-string">"author"</span>: <span class="hljs-string">"Carlos Echeverria"</span>,
+  <span class="hljs-string">"license"</span>: <span class="hljs-string">"MIT"</span>,
+  <span class="hljs-string">"dependencies"</span>:{
+    <span class="hljs-string">"mime"</span>: <span class="hljs-string">"1.2.11"</span>
+  }
+}

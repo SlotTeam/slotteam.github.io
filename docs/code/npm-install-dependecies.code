@@ -1,0 +1,8 @@
+$ cd /your-project-path/mySlotProject
+$ npm install
+
+npm WARN package.json myFirstModule@<span class="hljs-number">0.0</span><span class="hljs-number">.0</span> No repository field.
+npm WARN package.json myFirstModule@<span class="hljs-number">0.0</span><span class="hljs-number">.0</span> No README data
+npm http GET https:<span class="hljs-comment">//registry.npmjs.org/mime/1.2.11</span>
+npm http <span class="hljs-number">304</span> https:<span class="hljs-comment">//registry.npmjs.org/mime/1.2.11</span>
+mime@<span class="hljs-number">1.2</span><span class="hljs-number">.11</span> node_modules\mime

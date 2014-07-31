@@ -1,0 +1,9 @@
+{
+    error: <span class="hljs-number">0</span>,
+    msg: <span class="hljs-string">""</span>,
+    data: {
+        name: <span class="hljs-string">"Jhon"</span>,
+        lastName: <span class="hljs-string">"Doe"</span>,
+        birhtD: <span class="hljs-number">1402546374639</span>
+    }
+}

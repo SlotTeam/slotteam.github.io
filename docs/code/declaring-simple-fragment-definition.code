@@ -1,0 +1,6 @@
+<span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">binds</span>:<span class="hljs-value"> {
+        userName:<span class="hljs-string">"Jhon Doe"</span>,
+        userNumber:<span class="hljs-string">"#00001"</span>
+    </span></span></span>}
+}

@@ -1,0 +1,16 @@
+{
+    error: <span class="hljs-number">0</span>,                   <span class="hljs-comment">/*Error code*/</span>
+    msg: <span class="hljs-string">""</span>,                    <span class="hljs-comment">/*Execution message*/</span>
+    data: {                     <span class="hljs-comment">/*Structured data, in this case is a paginated array*/</span>
+        page: [
+            { <span class="hljs-comment">/* Single record One */</span>   },
+            { <span class="hljs-comment">/* Single record Two */</span>   },
+            { <span class="hljs-comment">/* Single record Three */</span> },
+            { <span class="hljs-comment">/* Single record Four */</span> }
+        ],
+        totalRows: <span class="hljs-number">10</span>,          <span class="hljs-comment">/*Number of rows on server side buffer*/</span>
+        totalPages: <span class="hljs-number">3</span>,          <span class="hljs-comment">/*Number o pages to scroll*/</span>
+        pageNumber: <span class="hljs-number">1</span>,          <span class="hljs-comment">/*Current page number*/</span>
+        pageSize: <span class="hljs-number">4</span>             <span class="hljs-comment">/*Number of records per page*/</span>
+    }
+}

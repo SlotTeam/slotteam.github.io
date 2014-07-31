@@ -1,0 +1,16 @@
+{
+    error: <span class="hljs-number">0</span>,
+    msg: <span class="hljs-string">""</span>,
+    data: {
+        page: [
+            { <span class="hljs-comment">/* record One */</span> },
+            { <span class="hljs-comment">/* record Two */</span> },
+            { <span class="hljs-comment">/* record Three */</span> },
+            { <span class="hljs-comment">/* record Four */</span> }
+        ],
+        totalRows: <span class="hljs-number">10</span>,
+        totalPages: <span class="hljs-number">3</span>,
+        pageNumber: <span class="hljs-number">1</span>,
+        pageSize: <span class="hljs-number">4</span>
+    }
+}

@@ -1,0 +1,14 @@
+<span class="hljs-keyword">var</span> Slot = <span class="hljs-built_in">require</span>(<span class="hljs-string">'slotFramework'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span><span class="hljs-params">(request,
+             callback)</span> {</span>
+
+    <span class="hljs-keyword">var</span> data = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+    data.name = <span class="hljs-string">"Jhon"</span>;
+    data.lastName = <span class="hljs-string">"Doe"</span>;
+    data.birhtD = (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()).getTime();
+
+    callback(data <span class="hljs-comment">/*&lt;&lt;== "data to be saved on session"*/</span>);
+}
+
+module.exports.run = run;
