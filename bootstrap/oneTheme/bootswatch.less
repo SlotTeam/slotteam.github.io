@@ -1,0 +1,1426 @@
+// OneTheme 1.0.0
+// Slot Themes
+// -----------------------------------------------------
+@import "variables";
+@import "/assets/less/mixins";
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+
+// Navbar =====================================================================
+
+.navbar {
+  border: none;
+  //font-size: 13px;
+
+  // CEcheverria
+  // Setting a big font
+  font-size: 14px; //@font-size-base;
+
+  font-weight: 300;
+
+  .navbar-toggle:hover .icon-bar {
+    background-color: #b3b3b3;
+  }
+
+  &-collapse {
+    border-top-color: @dropdown-divider-bg;
+    /*.box-shadow(none);*/
+  }
+
+  .btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .dropdown { /***/
+
+    &-menu {
+      border: none;
+
+      > li > a,
+      > li > a:focus {
+        background-color: transparent;
+        font-size: 13px;
+        font-weight: 300;
+      }
+    }
+
+    &-header {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+  }
+
+  &-default {
+
+    .dropdown-menu {
+      background-color: @navbar-default-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: @navbar-default-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: @navbar-default-link-hover-bg;
+      }
+    }
+
+    // CEcheverria:
+    // Transparenci at 0.5 looks too white, and don't looks legible whit gray navbar
+    // setting to default navbar dropdown-header-color
+    .dropdown-header {
+      color: @dropdown-header-color;
+    }
+  }
+
+  // CEcheverria
+  // Adding dark color to navbar
+  &-dark {
+
+    .dropdown-menu {
+      background-color: @navbar-dark-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: @navbar-dark-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: @navbar-dark-link-hover-bg;
+      }
+    }
+  }
+
+  &-inverse {
+
+    .dropdown-menu {
+      background-color: @navbar-inverse-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: @navbar-inverse-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: @navbar-inverse-link-hover-bg;
+      }
+    }
+  }
+
+  // CEcheverria
+  // Adding success color to navbar
+  &-success {
+
+    .dropdown-menu {
+      background-color: @navbar-success-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: @navbar-success-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: @navbar-success-link-hover-bg;
+      }
+    }
+  }
+
+  // CEcheverria
+  // Adding info color to navbar
+  &-info {
+
+    .dropdown-menu {
+      background-color: @navbar-info-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: @navbar-info-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: @navbar-info-link-hover-bg;
+      }
+    }
+  }
+
+  // CEcheverria
+  // Adding warning color to navbar
+  &-warning {
+
+    .dropdown-menu {
+      background-color: @navbar-warning-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: @navbar-warning-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: @navbar-warning-link-hover-bg;
+      }
+    }
+  }
+
+  // CEcheverria
+  // Adding danger color to navbar
+  &-danger {
+
+    .dropdown-menu {
+      background-color: @navbar-danger-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: @navbar-danger-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: @navbar-danger-link-hover-bg;
+      }
+    }
+  }
+
+  // CEcheverria
+  // Rounding borders on dropdown-menu bottom
+  .dropdown-menu {
+    > li > a:hover,
+    > .active > a,
+    > .active > a:hover {
+      border-radius: 0px 0px @border-radius-base @border-radius-base;
+    }
+  }
+}
+
+// CEcheverria:
+// Dark navbar =====================================================================
+.navbar-dark {
+  background-color: @navbar-dark-bg;
+  border-color: @navbar-dark-border;
+
+  .navbar-brand {
+    color: @navbar-dark-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-dark-brand-hover-color;
+      background-color: @navbar-dark-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: @navbar-dark-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-dark-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-dark-link-hover-color;
+        background-color: @navbar-dark-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-dark-link-active-color;
+        background-color: @navbar-dark-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-dark-link-disabled-color;
+        background-color: @navbar-dark-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: @navbar-dark-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-dark-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-dark-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken(@navbar-dark-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-dark-link-active-bg;
+        color: @navbar-dark-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: @navbar-dark-border;
+        }
+        .divider {
+          background-color: @navbar-dark-border;
+        }
+        > li > a {
+          color: @navbar-dark-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-dark-link-hover-color;
+            background-color: @navbar-dark-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-dark-link-active-color;
+            background-color: @navbar-dark-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-dark-link-disabled-color;
+            background-color: @navbar-dark-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: @navbar-dark-link-color;
+    &:hover {
+      color: @navbar-dark-link-hover-color;
+    }
+  }
+
+}
+
+// CEcheverria:
+// Success navbar =====================================================================
+.navbar-success {
+  background-color: @navbar-success-bg;
+  border-color: @navbar-success-border;
+
+  .navbar-brand {
+    color: @navbar-success-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-success-brand-hover-color;
+      background-color: @navbar-success-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: @navbar-success-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-success-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-success-link-hover-color;
+        background-color: @navbar-success-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-success-link-active-color;
+        background-color: @navbar-success-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-success-link-disabled-color;
+        background-color: @navbar-success-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: @navbar-success-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-success-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-success-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken(@navbar-success-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-success-link-active-bg;
+        color: @navbar-success-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: @navbar-success-border;
+        }
+        .divider {
+          background-color: @navbar-success-border;
+        }
+        > li > a {
+          color: @navbar-success-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-success-link-hover-color;
+            background-color: @navbar-success-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-success-link-active-color;
+            background-color: @navbar-success-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-success-link-disabled-color;
+            background-color: @navbar-success-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: @navbar-success-link-color;
+    &:hover {
+      color: @navbar-success-link-hover-color;
+    }
+  }
+
+}
+
+// CEcheverria:
+// Info navbar =====================================================================
+.navbar-info {
+  background-color: @navbar-info-bg;
+  border-color: @navbar-info-border;
+
+  .navbar-brand {
+    color: @navbar-info-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-info-brand-hover-color;
+      background-color: @navbar-info-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: @navbar-info-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-info-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-info-link-hover-color;
+        background-color: @navbar-info-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-info-link-active-color;
+        background-color: @navbar-info-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-info-link-disabled-color;
+        background-color: @navbar-info-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: @navbar-info-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-info-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-info-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken(@navbar-info-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-info-link-active-bg;
+        color: @navbar-info-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: @navbar-info-border;
+        }
+        .divider {
+          background-color: @navbar-info-border;
+        }
+        > li > a {
+          color: @navbar-info-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-info-link-hover-color;
+            background-color: @navbar-info-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-info-link-active-color;
+            background-color: @navbar-info-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-info-link-disabled-color;
+            background-color: @navbar-info-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: @navbar-info-link-color;
+    &:hover {
+      color: @navbar-info-link-hover-color;
+    }
+  }
+
+}
+
+// CEcheverria:
+// Warning navbar =====================================================================
+.navbar-warning {
+  background-color: @navbar-warning-bg;
+  border-color: @navbar-warning-border;
+
+  .navbar-brand {
+    color: @navbar-warning-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-warning-brand-hover-color;
+      background-color: @navbar-warning-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: @navbar-warning-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-warning-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-warning-link-hover-color;
+        background-color: @navbar-warning-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-warning-link-active-color;
+        background-color: @navbar-warning-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-warning-link-disabled-color;
+        background-color: @navbar-warning-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: @navbar-warning-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-warning-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-warning-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken(@navbar-warning-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-warning-link-active-bg;
+        color: @navbar-warning-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: @navbar-warning-border;
+        }
+        .divider {
+          background-color: @navbar-warning-border;
+        }
+        > li > a {
+          color: @navbar-warning-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-warning-link-hover-color;
+            background-color: @navbar-warning-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-warning-link-active-color;
+            background-color: @navbar-warning-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-warning-link-disabled-color;
+            background-color: @navbar-warning-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: @navbar-warning-link-color;
+    &:hover {
+      color: @navbar-warning-link-hover-color;
+    }
+  }
+
+}
+
+// CEcheverria:
+// Danger navbar =====================================================================
+.navbar-danger {
+  background-color: @navbar-danger-bg;
+  border-color: @navbar-danger-border;
+
+  .navbar-brand {
+    color: @navbar-danger-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-danger-brand-hover-color;
+      background-color: @navbar-danger-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: @navbar-danger-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-danger-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-danger-link-hover-color;
+        background-color: @navbar-danger-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-danger-link-active-color;
+        background-color: @navbar-danger-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-danger-link-disabled-color;
+        background-color: @navbar-danger-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: @navbar-danger-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-danger-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-danger-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken(@navbar-danger-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-danger-link-active-bg;
+        color: @navbar-danger-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: @navbar-danger-border;
+        }
+        .divider {
+          background-color: @navbar-danger-border;
+        }
+        > li > a {
+          color: @navbar-danger-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-danger-link-hover-color;
+            background-color: @navbar-danger-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-danger-link-active-color;
+            background-color: @navbar-danger-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-danger-link-disabled-color;
+            background-color: @navbar-danger-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: @navbar-danger-link-color;
+    &:hover {
+      color: @navbar-danger-link-hover-color;
+    }
+  }
+
+}
+
+// Buttons ====================================================================
+
+.btn {
+  /*padding: 14px 28px;
+
+  &-lg {
+    padding: 16px 32px;
+  }
+
+  &-sm {
+    padding: 8px 16px;
+  }
+
+  &-xs {
+    padding: 4px 8px;
+  }*/
+}
+
+.btn-group {
+
+  .btn ~ .dropdown-toggle {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .dropdown-menu {
+    border-top-width: 0;
+  }
+
+  &.dropup .dropdown-menu {
+    border-top-width: 1px;
+    border-bottom-width: 0;
+    margin-bottom: 0;
+  }
+
+  .dropdown-toggle {
+
+    &.btn-default ~ .dropdown-menu {
+      background-color: @btn-default-bg;
+      border-color: @btn-default-border;
+
+      > li > a {
+        color: @btn-default-color;
+      }
+
+      > li > a:hover {
+        background-color: darken(@btn-default-bg, 8%);
+      }
+    }
+
+    &.btn-primary ~ .dropdown-menu {
+      background-color: @btn-primary-bg;
+      border-color: @btn-primary-border;
+
+      > li > a {
+        color: @btn-primary-color;
+      }
+
+      > li > a:hover {
+        background-color: darken(@btn-primary-bg, 8%);
+      }
+    }
+
+    &.btn-success ~ .dropdown-menu {
+      background-color: @btn-success-bg;
+      border-color: @btn-success-border;
+
+      > li > a {
+        color: @btn-success-color;
+      }
+
+      > li > a:hover {
+        background-color: darken(@btn-success-bg, 8%);
+      }
+    }
+
+    &.btn-info ~ .dropdown-menu {
+      background-color: @btn-info-bg;
+      border-color: @btn-info-border;
+
+      > li > a {
+        color: @btn-info-color;
+      }
+
+      > li > a:hover {
+        background-color: darken(@btn-info-bg, 8%);
+      }
+    }
+
+    &.btn-warning ~ .dropdown-menu {
+      background-color: @btn-warning-bg;
+      border-color: @btn-warning-border;
+
+      > li > a {
+        color: @btn-warning-color;
+      }
+
+      > li > a:hover {
+        background-color: darken(@btn-warning-bg, 8%);
+      }
+    }
+
+    &.btn-danger ~ .dropdown-menu {
+      background-color: @btn-danger-bg;
+      border-color: @btn-danger-border;
+
+      > li > a {
+        color: @btn-danger-color;
+      }
+
+      > li > a:hover {
+        background-color: darken(@btn-danger-bg, 8%);
+      }
+    }
+  }
+
+  // CEcheverria
+  // Rounding borders on dropdown-menu
+  &.open {
+    button.btn {
+      border-bottom-left-radius: 0px;
+      /*border-bottom: 0;*/
+    }
+    .dropdown-toggle {
+      border-bottom-right-radius: 0px;
+    }
+    .dropdown-menu {
+      border-top-left-radius: 0px;
+    }
+  }
+
+  // CEcheverria
+  // Rounding borders on dropdown-menu when if dropup
+  &.dropup.open {
+    button.btn {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: @border-radius-base;
+      /*border-top: 0;
+      border-bottom: 0; // Restaurar al borde original que depende del color que se este usando*/
+    }
+    .dropdown-toggle {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: @border-radius-base;
+    }
+    .dropdown-menu {
+      border-bottom-left-radius: 0px;
+      border-top-left-radius: @border-radius-base;
+      .box-shadow(0 -6px 12px rgba(0,0,0,.175));
+    }
+  }
+}
+
+// Typography =================================================================
+
+.lead {
+  color: @gray;
+}
+
+cite {
+  font-style: italic;
+}
+
+blockquote {
+  border-left-width: 1px;
+  color: @gray;
+
+  // CEcheverria
+  // Making more simetrics paddings and margins
+  padding: 1px 1.0em;
+  margin: 9px 0 27px;
+
+  &.pull-right {
+    border-right-width: 1px;
+  }
+
+  small {
+    font-size: @font-size-small;
+    font-weight: 300;
+  }
+}
+
+// Tables =====================================================================
+
+table {
+  font-size: @font-size-small;
+}
+
+// CEcheverria
+// Overwrite default inner borders
+.table {
+  /*width: 100%;
+  margin-bottom: @line-height-computed;*/
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        /*padding: @table-cell-padding;
+        line-height: @line-height-base;
+        vertical-align: top;*/
+        border-top: 1px solid @table-border-color-inner; // @table-border-color;
+      }
+    }
+  }
+}
+
+// Forms ======================================================================
+
+input,
+.form-control {
+  padding: 7px;
+}
+
+// CEcheverria
+// Borders of form-controls looks so blur using default gray on @input-border,
+// setting de border depending of each navbar-color
+.navbar-dark {
+  input,
+  .form-control {
+    //border: 1px solid darken(@btn-dark-bg, 5%);
+    border: 1px solid @navbar-dark-border;
+  }
+}
+.navbar-inverse {
+  input,
+  .form-control {
+    border: 1px solid darken(@btn-primary-bg, 5%);
+    border: 1px solid @navbar-inverse-border;
+  }
+}
+.navbar-success {
+  input,
+  .form-control {
+    border: 1px solid darken(@btn-success-bg, 5%);
+    border: 1px solid @navbar-success-border;
+  }
+}
+.navbar-info {
+  input,
+  .form-control {
+    border: 1px solid darken(@btn-info-bg, 5%);
+    border: 1px solid @navbar-info-border;
+  }
+}
+.navbar-warning {
+  input,
+  .form-control {
+    border: 1px solid darken(@btn-warning-bg, 5%);
+    border: 1px solid @navbar-warning-border;
+  }
+}
+.navbar-danger {
+  input,
+  .form-control {
+    border: 1px solid darken(@btn-danger-bg, 5%);
+    border: 1px solid @navbar-danger-border;
+  }
+}
+
+label,
+.control-label,
+.help-block,
+.checkbox,
+.radio {
+  font-size: @font-size-small;
+  font-weight: normal;
+}
+
+.input-group-addon,
+.input-group-btn .btn {
+  padding: 8px 14px;
+  font-size: @font-size-small;
+  height: @input-height-base;
+}
+
+// Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
+
+.nav-tabs {
+  > li > a {
+    background-color: @btn-default-bg;
+    color: @text-color;
+  }
+
+  .caret {
+    border-top-color: @text-color;
+    border-bottom-color: @text-color;
+  }
+}
+
+.nav-pills {
+  font-weight: 300;
+}
+
+.breadcrumb {
+  border: 1px solid @table-border-color;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.pagination {
+  font-size: @font-size-small;
+  font-weight: 300;
+  color: @gray-light;
+
+  > li {
+    > a,
+    > span {
+      margin-left: 4px;
+      color: @gray-light;
+    }
+  }
+
+  > .active {
+    > a,
+    > span {
+      color: #fff;
+    }
+  }
+
+  > li,
+  > li:first-child,
+  > li:last-child {
+    > a,
+    > span {
+      border-radius: 3px;
+    }
+  }
+
+  &-lg > li > a {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  &-sm > li > a {
+    padding: 0 5px;
+  }
+}
+
+.pager {
+  font-size: @font-size-small;
+  font-weight: 300;
+  color: @gray-light;
+}
+
+.list-group {
+  font-size: @font-size-small;
+  font-weight: 300;
+}
+
+
+// CEcheverria
+// Watermarks icons =================================================================
+i.water, i.water-sm, i.water-lg {
+    opacity: 0.1 /*0.15*/;
+    position: absolute;
+    font-size: 6.5em;
+    max-width: 1em;
+    bottom: -0.2em;
+
+//i.water {
+  // Default is bottom-left side aligned
+  &.fa {
+    left: 0.0em;
+    .rotate(30deg);
+  }
+  &.top {
+    top: 0.0em;
+    bottom: auto;
+
+    &.fa {
+      .rotate(30deg);
+    }
+  }
+  &.right {
+    left: auto;
+    right: -0.1em;
+
+    &.fa {
+      //.rotate(-30deg);
+      .rotate-flip-horizontal(30deg; -1; 1);
+    }
+    &.top.fa {
+      // Maybe other rotation on top
+      //.rotate(-30deg);
+      .rotate-flip-horizontal(30deg; -1; 1);
+    }
+  }
+}
+i.water {
+  &-sm {
+    font-size: 3.5em;
+    bottom: 0.4em;
+    &.fa {
+      left: 0.2em;
+    }
+    &.right {
+      left: auto;
+      right: 0.2em;
+    }
+  }
+  &-lg {
+    /**
+     * TODO:
+     *  1.  Implement rules for -lg
+     */
+  }
+}
+
+
+  // Indicators =================================================================
+
+.close {
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.alert {
+  //font-size: @font-size-small;
+  //CEcheverria
+  font-size: @font-size-alert;
+  font-weight: 300;
+
+  a,
+  .alert-link {
+    font-weight: normal;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .close {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+}
+
+// CEcheverria
+// Adding the new alert-primary
+.alert-primary {
+  .alert-variant(@alert-primary-bg; @alert-primary-border; @alert-primary-text);
+}
+
+.label {
+  padding-left: 1em;
+  padding-right: 1em;
+  /*border-radius: 0;*/
+  border-radius: @border-radius-base;
+  font-weight: 300;
+
+  &-default {
+    background-color: @btn-default-bg;
+    color: @btn-default-color;
+  }
+}
+
+.badge {
+  font-weight: 300;
+}
+
+// Progress bars ==============================================================
+
+.progress {
+  height: 14px;               //height: 22px;
+  padding: 0px;               //padding: 2px;
+  background-color: #f6f6f6;  //background-color: #f6f6f6;
+  border: 1px solid #dddddd;  //border: 1px solid #ccc;
+  /*.box-shadow(none);*/
+}
+
+// Taked from Cosmo
+/*.progress {
+  height: 8px;
+  .box-shadow(none);
+  .progress-bar {
+    font-size: 8px;
+    line-height: 8px;
+  }
+}*/
+
+// Containers =================================================================
+
+.dropdown {
+
+  &-menu {
+    padding: 0;
+    margin-top: 0;
+    font-size: @font-size-small;
+
+    > li > a {
+      padding: 12px 15px;
+    }
+  }
+
+  &-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 9px;
+    text-transform: uppercase;
+  }
+}
+
+.popover {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.panel {
+  &-heading,
+  &-footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+// Thumbnails =================================================================
+// CEcheverria
+// Adding the new alert-primary
+.thumbnail {
+  background-color: lighten(@btn-default-bg, 7%);
+  padding: @thumbnail-padding;
+
+  > img,
+  a > img {
+    &:extend(.img-responsive);
+    border-top-left-radius: @border-radius-base;
+    border-top-right-radius: @border-radius-base;
+
+    width: 100%;  // Fix: Class ".img-responsive" only expand max-width up to natural picture width.
+  }
+  .caption {
+    margin-left: @thumbnail-caption-margin;
+
+    p {
+      color: @gray;
+    }
+  }
+
+  .header {
+    &:extend(.text-center);
+    margin-left: -1px;
+    margin-right: -1px;
+    margin-top: -1px;
+    border-top-left-radius: @border-radius-base;
+    border-top-right-radius: @border-radius-base;
+
+    //.default {
+      //background-color: lighten(@btn-default-bg, 5%);
+      background-color: @btn-default-bg;
+      color: lighten(@btn-default-color, 5%);
+      border: 1px solid @btn-default-border;
+      //border-bottom: 0px solid transparent !important;
+
+    //font-size: 5em;
+    line-height: 1.2;
+    font-size: 6em;
+
+    i {
+      //font-size: 8em;
+      .transition(opacity .15s linear);
+      opacity: 0.2;
+    }
+
+    &.primary {
+      background-color: lighten(@btn-primary-bg, 5%);
+      color: lighten(@btn-primary-color, 5%);
+      border: 1px solid @btn-primary-border;
+    }
+    &.success {
+      background-color: lighten(@btn-success-bg, 5%);
+      color: lighten(@btn-success-color, 5%);
+      border: 1px solid @btn-success-border;
+    }
+    &.info {
+      background-color: lighten(@btn-info-bg, 5%);
+      color: lighten(@btn-info-color, 5%);
+      border: 1px solid @btn-info-border;
+    }
+    &.warning {
+      background-color: lighten(@btn-warning-bg, 5%);
+      color: lighten(@btn-warning-color, 5%);
+      border: 1px solid @btn-warning-border;
+    }
+    &.danger {
+      background-color: lighten(@btn-danger-bg, 5%);
+      color: lighten(@btn-danger-color, 5%);
+      border: 1px solid @btn-danger-border;
+    }
+  }
+  &:hover .header i {
+    .transition(opacity .15s linear);
+    opacity: 0.6;
+  }
+
+}
