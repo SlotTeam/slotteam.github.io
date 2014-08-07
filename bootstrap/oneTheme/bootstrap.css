@@ -1,7 +1,7 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 /*!
- * BootSlot v1.0.0
- * A collection of themes for Bootstrap, all of them are intended to show case an easy way to make Weab Apps using Slot Framework (www.SlotFramework.com).
+ * slot-themes v1.0.001
+ * A collection of custom themes for Bootstrap (Zurb  Foundation and Kube are coming soon), all of them are intended to show case an easy way to build web apps using Slot Framework.
  * http://BootSlot.SlotFramework.org
  * 
  * Copyright 2014-2014 Carlos Echeverría
@@ -5929,6 +5929,20 @@ button.close {
 .navbar .dropdown-menu > .active > a,
 .navbar .dropdown-menu > .active > a:hover {
   border-radius: 0px 0px 2px 2px;
+}
+.navbar .navbar-fixed-top {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+.navbar-default.navbar-fixed-top,
+.navbar-dark.navbar-fixed-top,
+.navbar-inverse.navbar-fixed-top,
+.navbar-success.navbar-fixed-top,
+.navbar-info.navbar-fixed-top,
+.navbar-warning.navbar-fixed-top,
+.navbar-danger.navbar-fixed-top {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 .navbar-dark {
   background-color: #333333;
